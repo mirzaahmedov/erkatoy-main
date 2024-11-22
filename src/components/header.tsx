@@ -1,6 +1,6 @@
-import headerIcon1Image from "@/assets/img/icon/header_icon1.png";
-import logoImage from "@/assets/img/logo/logo.png";
-import headerCardImage from "@/assets/img/hero/header_card.jpg";
+import headerIcon1Image from "@/common/assets/img/icon/header_icon1.png";
+import logoImage from "@/common/assets/img/logo/logo.png";
+import headerCardImage from "@/common/assets/img/hero/header_card.jpg";
 
 import Image from "next/image";
 

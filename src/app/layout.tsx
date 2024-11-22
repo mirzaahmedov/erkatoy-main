@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
+import { ReactQueryProvider } from "@/common/lib/react-query";
 import { Header, Footer } from "@/components";
 
-import "@/assets/css/bootstrap.min.css";
-// import "@/assets/css/owl.carousel.min.css";
-// import "@/assets/css/ticker-style.css";
-import "@/assets/css/flaticon.css";
-import "@/assets/css/slicknav.css";
-import "@/assets/css/animate.min.css";
-import "@/assets/css/magnific-popup.css";
-import "@/assets/css/fontawesome-all.min.css";
-import "@/assets/css/themify-icons.css";
-import "@/assets/css/slick.css";
-import "@/assets/css/nice-select.css";
-import "@/assets/css/style.css";
+import "@/common/assets/css/bootstrap.min.css";
+// import "@/common/assets/css/owl.carousel.min.css";
+// import "@/common/assets/css/ticker-style.css";
+import "@/common/assets/css/flaticon.css";
+import "@/common/assets/css/slicknav.css";
+import "@/common/assets/css/animate.min.css";
+import "@/common/assets/css/magnific-popup.css";
+import "@/common/assets/css/fontawesome-all.min.css";
+import "@/common/assets/css/themify-icons.css";
+import "@/common/assets/css/slick.css";
+import "@/common/assets/css/nice-select.css";
+import "@/common/assets/css/style.css";
+import "swiper/css";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -43,9 +45,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ReactQueryProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ReactQueryProvider>
       </body>
     </html>
   );
