@@ -28,39 +28,32 @@
 */
 
 // Defult
-@import 'variables';
-@import 'mixins';
-@import 'overlay';
-@import 'common';
-@import 'color';
-
+@import "variables";
+@import "mixins";
+@import "overlay";
+@import "common";
+@import "color";
 
 // Homepage1
-@import 'headerMenu';
-@import 'trending';
-@import 'wecky-new';
-@import 'whats-new';
+@import "headerMenu";
+@import "trending";
+@import "wecky-new";
+@import "whats-new";
 
-@import 'wecky2-new';
-@import 'youtube';
-@import 'recent-articles';
-@import 'about-page';
+@import "wecky2-new";
+@import "youtube";
+@import "recent-articles";
+@import "about-page";
 
-
-
-
-
-
-
-@import 'footer';
+@import "footer";
 
 // inner Page
-@import 'services';
-
+@import "services";
 
 // Deful Element Page
-@import 'blog_page';
-@import 'contact';
-@import 'bradcam';
-@import 'extend';
-@import 'elements';
+@import "blog_page";
+@import "contact";
+@import "bradcam";
+@import "extend";
+@import "elements";
+@import "article";

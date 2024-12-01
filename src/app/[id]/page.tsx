@@ -8,7 +8,7 @@ type PostPageProps = {
   };
 };
 const PostPage = async ({ params }: PostPageProps) => {
-  const { id } = params;
+  const { id } = await params;
 
   const post = await getPostByIdQuery(id);
 
@@ -28,83 +28,11 @@ const PostPage = async ({ params }: PostPageProps) => {
               </div>
               <div
                 dangerouslySetInnerHTML={{ __html: post?.data.content }}
+                className="article-content"
               ></div>
             </div>
           </div>
-          <div className="col-lg-4">
-            {/* Section Tittle */}
-            <div className="section-tittle mb-40">
-              <h3>Follow Us</h3>
-            </div>
-            {/* Flow Socail */}
-            <div className="single-follow mb-45">
-              <div className="single-box">
-                <div className="follow-us d-flex align-items-center">
-                  <div className="follow-social">
-                    <a href="#">
-                      <img
-                        src="assets/img/news/icon-fb.png"
-                        alt
-                      />
-                    </a>
-                  </div>
-                  <div className="follow-count">
-                    <span>8,045</span>
-                    <p>Fans</p>
-                  </div>
-                </div>
-                <div className="follow-us d-flex align-items-center">
-                  <div className="follow-social">
-                    <a href="#">
-                      <img
-                        src="assets/img/news/icon-tw.png"
-                        alt
-                      />
-                    </a>
-                  </div>
-                  <div className="follow-count">
-                    <span>8,045</span>
-                    <p>Fans</p>
-                  </div>
-                </div>
-                <div className="follow-us d-flex align-items-center">
-                  <div className="follow-social">
-                    <a href="#">
-                      <img
-                        src="assets/img/news/icon-ins.png"
-                        alt
-                      />
-                    </a>
-                  </div>
-                  <div className="follow-count">
-                    <span>8,045</span>
-                    <p>Fans</p>
-                  </div>
-                </div>
-                <div className="follow-us d-flex align-items-center">
-                  <div className="follow-social">
-                    <a href="#">
-                      <img
-                        src="assets/img/news/icon-yo.png"
-                        alt
-                      />
-                    </a>
-                  </div>
-                  <div className="follow-count">
-                    <span>8,045</span>
-                    <p>Fans</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* New Poster */}
-            <div className="news-poster d-none d-lg-block">
-              <img
-                src="assets/img/news/news_card.jpg"
-                alt
-              />
-            </div>
-          </div>
+          <div className="col-lg-4"></div>
         </div>
       </div>
     </div>
