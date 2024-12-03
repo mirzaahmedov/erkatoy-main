@@ -19,11 +19,9 @@
   padding: 0;
   margin-left: 1.5em;
 }
-.ql-editor ol li {
-  list-style: decimal;
-}
+.ql-editor ol li,
 .ql-editor ul li {
-  list-style: disc;
+  list-style: decimal;
 }
 
 .ql-editor :where(h1, h2, h3, h4, h5, h6) {
@@ -31,7 +29,7 @@
 }
 
 .ql-editor h1 {
-  font-size: var(--text-size-4xl);
+  font-size: var(--text-size-4xl) !important;
 }
 .ql-editor h2 {
   font-size: var(--text-size-3xl);

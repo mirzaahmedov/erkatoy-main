@@ -18,6 +18,7 @@ import "@/common/assets/css/nice-select.css";
 import "@/common/assets/css/style.css";
 import "quill/dist/quill.snow.css";
 import "swiper/css";
+
 import "./globals.css";
 
 const nunito = Nunito({
