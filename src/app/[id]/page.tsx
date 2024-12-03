@@ -3,9 +3,9 @@ import { getPostByIdQuery } from "./actions";
 import { getImageURL } from "@/common/utils/image";
 
 type PostPageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 const PostPage = async ({ params }: PostPageProps) => {
   const { id } = await params;
