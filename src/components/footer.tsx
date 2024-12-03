@@ -1,11 +1,5 @@
 import logo2FooterImage from "@/common/assets/img/logo/logo2_footer.png";
 import formIconImage from "@/common/assets/img/logo/form-iocn.png";
-import instra1Image from "@/common/assets/img/post/instra1.jpg";
-import instra2Image from "@/common/assets/img/post/instra2.jpg";
-import instra3Image from "@/common/assets/img/post/instra3.jpg";
-import instra4Image from "@/common/assets/img/post/instra4.jpg";
-import instra5Image from "@/common/assets/img/post/instra5.jpg";
-import instra6Image from "@/common/assets/img/post/instra6.jpg";
 
 import Image from "next/image";
 
