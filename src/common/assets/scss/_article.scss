@@ -1,9 +1,13 @@
 .article-content {
   ul li {
-    list-style: decimal;
+    list-style: initial;
+    margin-left: 1.4rem;
+    padding: 0;
   }
   ol li {
-    list-style: disc;
+    list-style: decimal;
+    margin-left: 1.4rem;
+    padding: 0;
   }
   h1 {
     font-weight: bold;

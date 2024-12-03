@@ -20,7 +20,10 @@ const Footer = () => {
                 <div className="single-footer-caption">
                   <div className="footer-logo">
                     <a href="index.html">
-                      <Image src={logo2FooterImage} alt="logo" />
+                      <Image
+                        src={logo2FooterImage}
+                        alt="logo"
+                      />
                     </a>
                   </div>
                   <div className="footer-tittle">
@@ -79,54 +82,16 @@ const Footer = () => {
                             id="newsletter-submit"
                             className="email_icon newsletter-submit button-contactForm"
                           >
-                            <Image src={formIconImage} alt="form icon" />
+                            <Image
+                              src={formIconImage}
+                              alt="form icon"
+                            />
                           </button>
                         </div>
                         <div className="mt-10 info"></div>
                       </form>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-              <div className="single-footer-caption mb-50 mt-60">
-                <div className="footer-tittle">
-                  <h4>Instagram Feed</h4>
-                </div>
-                <div className="instagram-gellay">
-                  <ul className="insta-feed">
-                    <li>
-                      <a href="#">
-                        <Image src={instra1Image} alt="instra" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image src={instra2Image} alt="instra" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image src={instra3Image} alt="instra" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image src={instra4Image} alt="instra" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image src={instra5Image} alt="instra" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image src={instra6Image} alt="instra" />
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -143,8 +108,15 @@ const Footer = () => {
                     Copyright &copy;
                     {new Date().getFullYear()}
                     All rights reserved | This template is made with{" "}
-                    <i className="ti-heart" aria-hidden="true"></i> by{" "}
-                    <a href="https://colorlib.com" target="_blank">
+                    <i
+                      className="ti-heart"
+                      aria-hidden="true"
+                    ></i>{" "}
+                    by{" "}
+                    <a
+                      href="https://colorlib.com"
+                      target="_blank"
+                    >
                       Colorlib
                     </a>
                   </p>

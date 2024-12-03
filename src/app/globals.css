@@ -1,0 +1,38 @@
+.ql-editor ul li {
+  list-style: initial;
+  padding: 0;
+  margin-left: 1.5rem;
+}
+.ql-editor ol {
+  padding: 0;
+}
+.ql-editor ol li {
+  list-style: decimal;
+  padding: 0;
+  margin-left: 1.5rem;
+}
+.ql-editor h1 {
+  font-weight: bold;
+  font-size: 2.986rem;
+}
+.ql-editor h2 {
+  font-weight: bold;
+  font-size: 2.488rem;
+}
+.ql-editor h3 {
+  font-weight: bold;
+  font-size: 2.074rem;
+}
+
+.ql-editor h4 {
+  font-weight: bold;
+  font-size: 1.728rem;
+}
+.ql-editor h5 {
+  font-weight: bold;
+  font-size: 1.44rem;
+}
+.ql-editor h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}

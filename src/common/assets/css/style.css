@@ -27,7 +27,6 @@
 */
 /*-------------   Color variabel  --------------*/
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap");
 .color1 {
   background: #ffe7e6;
 }
@@ -188,10 +187,15 @@
 }
 
 /* 1. Theme default css */
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: normal;
   font-style: normal;
+  font-size: 16px;
 }
 
 h1,
@@ -200,7 +204,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
   color: #000;
   margin-top: 0px;
   font-style: normal;
@@ -209,7 +212,6 @@ h6 {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
   color: #506172;
   font-size: 16px;
   line-height: 30px;
@@ -6159,10 +6161,14 @@ del {
 }
 
 .article-content ul li {
-  list-style: decimal;
+  list-style: initial;
+  margin-left: 1.4rem;
+  padding: 0;
 }
 .article-content ol li {
-  list-style: disc;
+  list-style: decimal;
+  margin-left: 1.4rem;
+  padding: 0;
 }
 .article-content h1 {
   font-weight: bold;

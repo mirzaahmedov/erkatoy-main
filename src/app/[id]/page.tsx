@@ -24,11 +24,12 @@ const PostPage = async ({ params }: PostPageProps) => {
                   alt={post?.data.title}
                   width={1000}
                   height={500}
+                  className="w-full h-auto"
                 />
               </div>
               <div
                 dangerouslySetInnerHTML={{ __html: post?.data.content }}
-                className="article-content"
+                className="ql-editor"
               ></div>
             </div>
           </div>
