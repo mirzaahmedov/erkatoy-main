@@ -3,6 +3,7 @@ import logoImage from "@/common/assets/img/logo/logo.png";
 import headerCardImage from "@/common/assets/img/hero/header_card.jpg";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -16,11 +17,17 @@ const Header = () => {
                   <div className="header-info-left">
                     <ul>
                       <li>
-                        <Image src={headerIcon1Image} alt="header icon 1" />
+                        <Image
+                          src={headerIcon1Image}
+                          alt="header icon 1"
+                        />
                         34ºc, Sunny{" "}
                       </li>
                       <li>
-                        <Image src={headerIcon1Image} alt="header icon 1" />
+                        <Image
+                          src={headerIcon1Image}
+                          alt="header icon 1"
+                        />
                         Tuesday, 18th June, 2019
                       </li>
                     </ul>
@@ -54,14 +61,20 @@ const Header = () => {
               <div className="row d-flex align-items-center">
                 <div className="col-xl-3 col-lg-3 col-md-3">
                   <div className="logo">
-                    <a href="index.html">
-                      <Image src={logoImage} alt="logo" />
-                    </a>
+                    <Link href="/">
+                      <Image
+                        src={logoImage}
+                        alt="logo"
+                      />
+                    </Link>
                   </div>
                 </div>
                 <div className="col-xl-9 col-lg-9 col-md-9">
                   <div className="header-banner f-right ">
-                    <Image src={headerCardImage} alt="header card" />
+                    <Image
+                      src={headerCardImage}
+                      alt="header card"
+                    />
                   </div>
                 </div>
               </div>
@@ -73,7 +86,10 @@ const Header = () => {
                 <div className="col-xl-10 col-lg-10 col-md-12 header-flex">
                   <div className="sticky-logo">
                     <a href="index.html">
-                      <Image src={logoImage} alt="logo" />
+                      <Image
+                        src={logoImage}
+                        alt="logo"
+                      />
                     </a>
                   </div>
                   <div className="main-menu d-none d-md-block">
@@ -120,7 +136,10 @@ const Header = () => {
                     <i className="fas fa-search special-tag"></i>
                     <div className="search-box">
                       <form action="#">
-                        <input type="text" placeholder="Search" />
+                        <input
+                          type="text"
+                          placeholder="Search"
+                        />
                       </form>
                     </div>
                   </div>
