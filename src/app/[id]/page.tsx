@@ -29,7 +29,7 @@ const PostPage = async ({ params }: PostPageProps) => {
               </div>
               <div
                 dangerouslySetInnerHTML={{ __html: post?.data.content }}
-                className="ql-editor"
+                className="mt-30 ql-editor"
               ></div>
             </div>
           </div>
