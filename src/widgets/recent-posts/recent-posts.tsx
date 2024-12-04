@@ -33,7 +33,6 @@ const RecentPosts = () => {
                 slidesPerView={3}
                 autoplay={{ delay: 3000 }}
                 modules={[Autoplay, Pagination, Navigation]}
-                loop
               >
                 {Array.isArray(postList?.data)
                   ? postList.data.map((post) => (
