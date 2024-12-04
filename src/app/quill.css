@@ -19,31 +19,33 @@
   padding: 0;
   margin-left: 1.5em;
 }
-.ql-editor ol li,
-.ql-editor ul li {
+.ql-editor ol li {
   list-style: decimal;
 }
+.ql-editor ul li {
+  list-style: disc;
+}
 
-.ql-editor :where(h1, h2, h3, h4, h5, h6) {
+.ql-snow .ql-editor strong {
   font-weight: bold;
 }
 
-.ql-editor h1 {
-  font-size: var(--text-size-4xl) !important;
+.ql-snow .ql-editor h1 {
+  font-size: var(--text-size-4xl);
 }
-.ql-editor h2 {
+.ql-snow .ql-editor h2 {
   font-size: var(--text-size-3xl);
 }
-.ql-editor h3 {
+.ql-snow .ql-editor h3 {
   font-size: var(--text-size-2xl);
 }
 
-.ql-editor h4 {
+.ql-snow .ql-editor h4 {
   font-size: var(--text-size-xl);
 }
-.ql-editor h5 {
+.ql-snow .ql-editor h5 {
   font-size: var(--text-size-lg);
 }
-.ql-editor h6 {
+.ql-snow .ql-editor h6 {
   font-size: var(--text-size-md);
 }

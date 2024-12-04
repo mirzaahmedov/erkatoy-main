@@ -17,7 +17,7 @@ const PostPage = async ({ params }: PostPageProps) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-8">
-            <div className="about-right mb-90">
+            <div className="about-right mb-90 ql-snow">
               <div className="about-img mt-30">
                 <Image
                   src={getImageURL(post?.data.imageurl)}
