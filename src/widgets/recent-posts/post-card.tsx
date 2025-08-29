@@ -1,17 +1,17 @@
-import type { Post } from "@/entities";
+import type { IPost } from "@/entities";
 import Image from "next/image";
 import Link from "next/link";
-import { getImageURL } from "@/common/utils/image";
+import { getImageUrl } from "@/utils/image";
 
 type PostCardProps = {
-  post: Post;
+  post: IPost;
 };
 const PostCard = ({ post }: PostCardProps) => {
   return (
     <div className="single-recent mb-100">
       <div className="what-img">
         <Image
-          src={getImageURL(post.imageurl)}
+          src={getImageUrl(post.image)}
           alt={post.title}
           fill
         />

@@ -1,17 +1,14 @@
-import { Tag } from "./tag";
-
-type Post = {
+export interface IPost {
   id: number;
   title: string;
-  fio: string | null;
-  descr: string;
+  description: string;
   content: string;
+  image: string;
   category_id: number;
+  tags: string;
+  fio: string;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
   category_name: string;
-  view: number;
-  click: number;
-  imageurl: string;
-  tags: Tag[];
-};
-
-export type { Post };
+}

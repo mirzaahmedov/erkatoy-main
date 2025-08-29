@@ -11,10 +11,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const RecentPosts = () => {
-  const { data: postList } = useQuery({
+  const postsQuery = useQuery({
     queryKey: ["recent-posts"],
     queryFn: getRecentPostListQuery,
   });
+
+  const postsData = postsQuery.data?.data?.data ?? [];
 
   return (
     <div className="recent-articles">
@@ -34,8 +36,8 @@ const RecentPosts = () => {
                 autoplay={{ delay: 3000 }}
                 modules={[Autoplay, Pagination, Navigation]}
               >
-                {Array.isArray(postList?.data)
-                  ? postList.data.map((post) => (
+                {Array.isArray(postsData)
+                  ? postsData.map((post) => (
                       <SwiperSlide key={post.id}>
                         <PostCard post={post} />
                       </SwiperSlide>

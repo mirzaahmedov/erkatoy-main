@@ -1,9 +1,7 @@
-import type { HTTPResponse, Post } from "@/entities";
+import type { HTTPResponse, IPost } from "@/entities";
 import { client } from "@/common/lib/http";
 
-const getPostByIdQuery = async (id: string) => {
-  const res = await client.get<HTTPResponse<Post>>(`user/panel/post/${id}`);
+export const getPostByIdQuery = async (id: string) => {
+  const res = await client.get<HTTPResponse<IPost>>(`public/posts/${id}`);
   return res.data;
 };
-
-export { getPostByIdQuery };

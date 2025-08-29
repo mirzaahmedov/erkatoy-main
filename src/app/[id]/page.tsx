@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getPostByIdQuery } from "./actions";
-import { getImageURL } from "@/common/utils/image";
+import { getImageUrl } from "@/utils/image";
 
 type PostPageProps = {
   params: Promise<{
@@ -20,7 +20,7 @@ const PostPage = async ({ params }: PostPageProps) => {
             <div className="about-right mb-90 ql-snow">
               <div className="about-img mt-30">
                 <Image
-                  src={getImageURL(post?.data.imageurl)}
+                  src={getImageUrl(post?.data.image)}
                   alt={post?.data.title}
                   width={1000}
                   height={500}
