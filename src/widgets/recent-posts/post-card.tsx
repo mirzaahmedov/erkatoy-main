@@ -6,24 +6,24 @@ import { getImageUrl } from "@/utils/image";
 type PostCardProps = {
   post: IPost;
 };
-const PostCard = ({ post }: PostCardProps) => {
+export const PostCard = ({ post }: PostCardProps) => {
   return (
-    <div className="single-recent mb-100">
-      <div className="what-img">
-        <Image
-          src={getImageUrl(post.image)}
-          alt={post.title}
-          fill
-        />
+    <Link href={`${post.id}`}>
+      <div className="single-recent mb-100">
+        <div className="what-img">
+          <Image
+            src={getImageUrl(post.image)}
+            alt={post.title}
+            fill
+          />
+        </div>
+        <div className="what-cap">
+          <span className="color1">{post.category_name}</span>
+          <h4>
+            <span>{post.title}</span>
+          </h4>
+        </div>
       </div>
-      <div className="what-cap">
-        <span className="color1">{post.category_name}</span>
-        <h4>
-          <Link href={`/${post.id}`}>{post.title}</Link>
-        </h4>
-      </div>
-    </div>
+    </Link>
   );
 };
-
-export { PostCard };

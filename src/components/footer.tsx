@@ -1,9 +1,7 @@
-import logo2FooterImage from "@/common/assets/img/logo/logo2_footer.png";
-import formIconImage from "@/common/assets/img/logo/form-iocn.png";
-
 import Image from "next/image";
+import logoImage from "@/common/assets/img/logo/logo.png";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer>
       <div className="footer-area footer-padding fix">
@@ -15,7 +13,7 @@ const Footer = () => {
                   <div className="footer-logo">
                     <a href="index.html">
                       <Image
-                        src={logo2FooterImage}
+                        src={logoImage}
                         alt="logo"
                       />
                     </a>
@@ -23,15 +21,17 @@ const Footer = () => {
                   <div className="footer-tittle">
                     <div className="footer-pera">
                       <p>
-                        Suscipit mauris pede for con sectetuer sodales adipisci
-                        for cursus fames lectus tempor da blandit gravida
-                        sodales Suscipit mauris pede for con sectetuer sodales
-                        adipisci for cursus fames lectus tempor da blandit
-                        gravida sodales Suscipit mauris pede for sectetuer.
+                        Erkatoy.uz – bolajonlar uchun mo‘ljallangan ertaklar,
+                        she’rlar, topishmoqlar va bolalar adabiyotiga oid turli
+                        xil qiziqarli materiallar jamlangan o‘zbekcha vebsayt.
+                        Sayt kichkintoylarning tasavvuri, fikrlashi va nutqini
+                        rivojlantirishga ko‘maklashuvchi, o‘qish va eshitish
+                        orqali o‘rganishga xizmat qiluvchi boy manba
+                        hisoblanadi.
                       </p>
                     </div>
                   </div>
-                  <div className="footer-social">
+                  {/* <div className="footer-social">
                     <a href="#">
                       <i className="fab fa-twitter"></i>
                     </a>
@@ -41,12 +41,12 @@ const Footer = () => {
                     <a href="#">
                       <i className="fab fa-pinterest-p"></i>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-4  col-sm-6">
-              <div className="single-footer-caption mt-60">
+              {/* <div className="single-footer-caption mt-60">
                 <div className="footer-tittle">
                   <h4>Newsletter</h4>
                   <p>
@@ -87,7 +87,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -101,22 +101,11 @@ const Footer = () => {
                   <p>
                     Copyright &copy;
                     {new Date().getFullYear()}
-                    All rights reserved | This template is made with{" "}
-                    <i
-                      className="ti-heart"
-                      aria-hidden="true"
-                    ></i>{" "}
-                    by{" "}
-                    <a
-                      href="https://colorlib.com"
-                      target="_blank"
-                    >
-                      Colorlib
-                    </a>
+                    All rights reserved @mirzaahmedov.dev
                   </p>
                 </div>
               </div>
-              <div className="col-lg-6">
+              {/* <div className="col-lg-6">
                 <div className="footer-menu f-right">
                   <ul>
                     <li>
@@ -130,7 +119,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -138,5 +127,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export { Footer };
