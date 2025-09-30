@@ -7,6 +7,9 @@ type PostCardProps = {
   post: IPost;
 };
 export const PostCard = ({ post }: PostCardProps) => {
+  console.log("post card", {
+    image: getImageUrl(post.image),
+  });
   return (
     <Link href={`${post.id}`}>
       <div className="single-recent mb-100">

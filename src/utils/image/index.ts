@@ -1,5 +1,5 @@
 import { baseURL } from "@/common/lib/http";
 
 export const getImageUrl = (url: string) => {
-  return url.replace("http://localhost:4001", baseURL);
+  return url?.replace("http://localhost:4001", baseURL);
 };

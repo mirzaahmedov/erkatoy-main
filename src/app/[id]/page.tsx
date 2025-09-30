@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { getPostByIdQuery } from "./actions";
+import { SimilarPosts } from "./similar-posts";
 import { getImageUrl } from "@/utils/image";
+import { getPostByIdQuery } from "./actions";
 
 type PostPageProps = {
   params: Promise<{
@@ -12,10 +13,17 @@ const PostPage = async ({ params }: PostPageProps) => {
 
   const post = await getPostByIdQuery(id);
 
+  console.log("post page", {
+    image: getImageUrl(post?.data.image),
+  });
+
   return (
     <div className="about-area">
       <div className="container">
         <div className="row">
+          <div className="col-lg-4">
+            {/* <SimilarPosts categoryId={post?.data.category_id} /> */}
+          </div>
           <div className="col-lg-8">
             <div className="about-right mb-90 ql-snow">
               <div className="about-img mt-30">

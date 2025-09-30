@@ -1,19 +1,20 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { PostCard } from "./post-card";
-import { getRecentPostListQuery } from "./actions";
-import { useQuery } from "@tanstack/react-query";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { PostCard } from "./post-card";
+import { getRecentPostListQuery } from "./actions";
+import { useQuery } from "@tanstack/react-query";
+
 const RecentPosts = () => {
   const postsQuery = useQuery({
     queryKey: ["recent-posts"],
-    queryFn: getRecentPostListQuery,
+    queryFn: () => getRecentPostListQuery(),
   });
 
   const postsData = postsQuery.data?.data?.data ?? [];
