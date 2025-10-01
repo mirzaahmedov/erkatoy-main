@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PostComments } from "@/widgets/comments/post-comments";
 import { SimilarPosts } from "./similar-posts";
 import { getImageUrl } from "@/utils/image";
 import { getPostByIdQuery } from "./actions";
@@ -13,16 +14,12 @@ const PostPage = async ({ params }: PostPageProps) => {
 
   const post = await getPostByIdQuery(id);
 
-  console.log("post page", {
-    image: getImageUrl(post?.data.image),
-  });
-
   return (
     <div className="about-area">
       <div className="container">
         <div className="row">
           <div className="col-lg-4">
-            {/* <SimilarPosts categoryId={post?.data.category_id} /> */}
+            <SimilarPosts categoryId={post?.data.category_id} />
           </div>
           <div className="col-lg-8">
             <div className="about-right mb-90 ql-snow">
@@ -42,6 +39,12 @@ const PostPage = async ({ params }: PostPageProps) => {
             </div>
           </div>
           <div className="col-lg-4"></div>
+        </div>
+        <div className="row">
+          <div className="col-lg-4"></div>
+          <div className="col-lg-8">
+            <PostComments postId={post.data?.id} />
+          </div>
         </div>
       </div>
     </div>

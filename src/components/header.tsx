@@ -1,15 +1,24 @@
+"use client";
+
+import { LogOut, UserCircle } from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
 import headerCardImage from "@/common/assets/img/hero/header_card.jpg";
 import headerIcon1Image from "@/common/assets/img/icon/header_icon1.png";
 import logoImage from "@/common/assets/img/logo/logo.png";
+import { useAuthStore } from "@/stores/auth";
+import { useRouter } from "next/navigation";
 
-const Header = () => {
+export const Header = () => {
+  const isAuthenticated = useAuthStore((store) => store.isAuthenticated);
+  const logout = useAuthStore((store) => store.logout);
+  const router = useRouter();
   return (
     <header>
       <div className="header-area">
         <div className="main-header ">
-          <div className="header-top black-bg d-none d-md-block">
+          <div className="header-top black-bg d-none d-md-block ">
             <div className="container">
               <div className="col-xl-12">
                 <div className="row d-flex justify-content-between align-items-center">
@@ -31,7 +40,7 @@ const Header = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="header-info-right">
+                  <div className="header-info-right flex items-center gap-10">
                     <ul className="header-social">
                       <li>
                         <a href="#">
@@ -50,6 +59,22 @@ const Header = () => {
                         </a>
                       </li>
                     </ul>
+
+                    <div className="flex items-center gap-4">
+                      <button
+                        hidden={isAuthenticated}
+                        onClick={() => router.push("/login")}
+                      >
+                        <UserCircle className="text-white size-5" />
+                      </button>
+                      <button
+                        hidden={!isAuthenticated}
+                        onClick={logout}
+                        className="text-white hover:!text-primary"
+                      >
+                        <LogOut className="size-5 text-inherit" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -154,5 +179,3 @@ const Header = () => {
     </header>
   );
 };
-
-export { Header };

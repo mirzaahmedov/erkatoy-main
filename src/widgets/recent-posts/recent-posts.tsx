@@ -11,7 +11,7 @@ import { PostCard } from "./post-card";
 import { getRecentPostListQuery } from "./actions";
 import { useQuery } from "@tanstack/react-query";
 
-const RecentPosts = () => {
+export const RecentPosts = () => {
   const postsQuery = useQuery({
     queryKey: ["recent-posts"],
     queryFn: () => getRecentPostListQuery(),
@@ -52,5 +52,3 @@ const RecentPosts = () => {
     </div>
   );
 };
-
-export { RecentPosts };
