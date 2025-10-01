@@ -2,20 +2,24 @@ import type { IPost } from "@/entities";
 import Image from "next/image";
 import Link from "next/link";
 import { getImageUrl } from "@/utils/image";
+import { useState } from "react";
 
 type PostCardProps = {
   post: IPost;
 };
 export const PostCard = ({ post }: PostCardProps) => {
-  console.log("post card", {
-    image: getImageUrl(post.image),
-  });
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <Link href={`${post.id}`}>
+    <Link
+      href={`${post.id}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="single-recent mb-100">
         <div className="what-img">
           <Image
-            src={getImageUrl(post.image)}
+            src={isHovered ? getImageUrl(post.gif) : getImageUrl(post.image)}
             alt={post.title}
             fill
           />

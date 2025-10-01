@@ -45,3 +45,29 @@ export const useCommentCreate = () => {
     },
   });
 };
+
+export interface ICommentUpdatePayload {
+  comment: string;
+  reply_id: number | null;
+}
+export const useCommentUpdate = () => {
+  return useMutation({
+    mutationFn: async (values: {
+      id: number;
+      payload: ICommentUpdatePayload;
+    }) => {
+      const { id, payload } = values;
+      const response = await client.put(`/comment/${id}`, payload);
+      return response.data;
+    },
+  });
+};
+
+export const useCommentDelete = () => {
+  return useMutation({
+    mutationFn: async (id: number) => {
+      const response = await client.delete(`/comment/${id}`);
+      return response.data;
+    },
+  });
+};

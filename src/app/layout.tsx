@@ -1,12 +1,4 @@
-import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
-
-import { ReactQueryProvider } from "@/common/lib/react-query";
-import { Header, Footer } from "@/components";
-
 import "@/common/assets/css/bootstrap.min.css";
-// import "@/common/assets/css/owl.carousel.min.css";
-// import "@/common/assets/css/ticker-style.css";
 import "@/common/assets/css/flaticon.css";
 import "@/common/assets/css/slicknav.css";
 import "@/common/assets/css/animate.min.css";
@@ -18,8 +10,16 @@ import "@/common/assets/css/nice-select.css";
 import "@/common/assets/css/style.css";
 import "quill/dist/quill.snow.css";
 import "swiper/css";
-
 import "./globals.css";
+
+import { Footer, Header } from "@/components";
+
+import type { Metadata } from "next";
+import { Nunito } from "next/font/google";
+import { ReactQueryProvider } from "@/common/lib/react-query";
+
+// import "@/common/assets/css/owl.carousel.min.css";
+// import "@/common/assets/css/ticker-style.css";
 
 const nunito = Nunito({
   weight: ["400", "700"],
@@ -40,8 +40,10 @@ export default function RootLayout({
       <body className={`${nunito.className} antialiased`}>
         <ReactQueryProvider>
           <Header />
-          <main>{children}</main>
-          <Footer />
+          <main className="flex-1 overflow-y-auto">
+            {children}
+            <Footer />
+          </main>
         </ReactQueryProvider>
       </body>
     </html>

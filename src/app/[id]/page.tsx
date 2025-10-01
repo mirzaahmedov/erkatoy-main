@@ -18,7 +18,13 @@ const PostPage = async ({ params }: PostPageProps) => {
     <div className="about-area">
       <div className="container">
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-4 h-full sticky top-0 py-5 border-r">
+            <div className="mb-4 flex items-center gap-2">
+              <span className="block w-1.5 h-5 bg-blue-500 rounded-sm"></span>
+              <h5 className="text-lg font-semibold text-gray-800 tracking-tight">
+                O&apos;xshash maqolalar
+              </h5>
+            </div>
             <SimilarPosts categoryId={post?.data.category_id} />
           </div>
           <div className="col-lg-8">
@@ -40,7 +46,7 @@ const PostPage = async ({ params }: PostPageProps) => {
           </div>
           <div className="col-lg-4"></div>
         </div>
-        <div className="row">
+        <div className="row py-5">
           <div className="col-lg-4"></div>
           <div className="col-lg-8">
             <PostComments postId={post.data?.id} />

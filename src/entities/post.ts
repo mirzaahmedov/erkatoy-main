@@ -4,6 +4,7 @@ export interface IPost {
   description: string;
   content: string;
   image: string;
+  gif: string;
   category_id: number;
   tags: string;
   fio: string;

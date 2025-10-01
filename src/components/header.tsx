@@ -4,13 +4,16 @@ import { LogOut, UserCircle } from "lucide-react";
 
 import Image from "next/image";
 import Link from "next/link";
-import headerCardImage from "@/common/assets/img/hero/header_card.jpg";
+import bannerGifImage from "@/common/assets/img/banner.gif";
 import headerIcon1Image from "@/common/assets/img/icon/header_icon1.png";
 import logoImage from "@/common/assets/img/logo/logo.png";
 import { useAuthStore } from "@/stores/auth";
 import { useRouter } from "next/navigation";
 
+// import headerCardImage from "@/common/assets/img/hero/header_card.jpg";
+
 export const Header = () => {
+  const account = useAuthStore((store) => store.account);
   const isAuthenticated = useAuthStore((store) => store.isAuthenticated);
   const logout = useAuthStore((store) => store.logout);
   const router = useRouter();
@@ -61,19 +64,34 @@ export const Header = () => {
                     </ul>
 
                     <div className="flex items-center gap-4">
-                      <button
-                        hidden={isAuthenticated}
-                        onClick={() => router.push("/login")}
-                      >
-                        <UserCircle className="text-white size-5" />
-                      </button>
-                      <button
-                        hidden={!isAuthenticated}
-                        onClick={logout}
-                        className="text-white hover:!text-primary"
-                      >
-                        <LogOut className="size-5 text-inherit" />
-                      </button>
+                      {isAuthenticated ? (
+                        <>
+                          <button
+                            onClick={() => router.push("/login")}
+                            className="flex items-center gap-2 text-white hover:!text-primary"
+                          >
+                            <UserCircle className="size-5" />
+                            <span hidden={!isAuthenticated}>
+                              {account?.email}
+                            </span>
+                          </button>
+                          <button
+                            hidden={!isAuthenticated}
+                            onClick={logout}
+                            className="text-white hover:!text-primary"
+                          >
+                            <LogOut className="size-5 text-inherit" />
+                          </button>
+                        </>
+                      ) : (
+                        <button
+                          onClick={() => router.push("/login")}
+                          className="flex items-center gap-2 text-white hover:!text-primary"
+                        >
+                          <UserCircle className="size-5" />
+                          <span className="text-sm">Tizimga kirish</span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -94,10 +112,12 @@ export const Header = () => {
                   </div>
                 </div>
                 <div className="col-xl-9 col-lg-9 col-md-9">
-                  <div className="header-banner f-right ">
+                  <div className="header-banner f-right w-full max-w-lg h-20 overflow-hidden">
                     <Image
-                      src={headerCardImage}
+                      src={bannerGifImage}
                       alt="header card"
+                      objectFit="cover"
+                      objectPosition="center"
                     />
                   </div>
                 </div>
