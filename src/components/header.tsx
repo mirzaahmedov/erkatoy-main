@@ -2,9 +2,9 @@
 
 import { LogOut, UserCircle } from "lucide-react";
 
+import { BannerGifs } from "@/widgets/gifs/banner-gifs";
 import Image from "next/image";
 import Link from "next/link";
-import bannerGifImage from "@/common/assets/img/banner.gif";
 import headerIcon1Image from "@/common/assets/img/icon/header_icon1.png";
 import logoImage from "@/common/assets/img/logo/logo.png";
 import { useAuthStore } from "@/stores/auth";
@@ -17,6 +17,7 @@ export const Header = () => {
   const isAuthenticated = useAuthStore((store) => store.isAuthenticated);
   const logout = useAuthStore((store) => store.logout);
   const router = useRouter();
+
   return (
     <header>
       <div className="header-area">
@@ -112,13 +113,8 @@ export const Header = () => {
                   </div>
                 </div>
                 <div className="col-xl-9 col-lg-9 col-md-9">
-                  <div className="header-banner f-right w-full max-w-lg h-20 overflow-hidden">
-                    <Image
-                      src={bannerGifImage}
-                      alt="header card"
-                      objectFit="cover"
-                      objectPosition="center"
-                    />
+                  <div className="relative header-banner f-right w-full max-w-2xl h-20 overflow-hidden">
+                    <BannerGifs />
                   </div>
                 </div>
               </div>
