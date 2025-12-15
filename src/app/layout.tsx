@@ -17,7 +17,6 @@ import { Footer, Header } from "@/components";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { ReactQueryProvider } from "@/common/lib/react-query";
-import { SideAds } from "@/widgets/ads/side-ads";
 
 // import "@/common/assets/css/owl.carousel.min.css";
 // import "@/common/assets/css/ticker-style.css";
@@ -41,10 +40,9 @@ export default function RootLayout({
       <body className={`${nunito.className} antialiased`}>
         <ReactQueryProvider>
           <Header />
-          <main className="relative flex-1 overflow-y-auto">
+          <main className="flex-1 overflow-y-auto">
             {children}
             <Footer />
-            <SideAds />
           </main>
         </ReactQueryProvider>
       </body>

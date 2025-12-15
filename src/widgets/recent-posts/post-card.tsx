@@ -19,9 +19,16 @@ export const PostCard = ({ post }: PostCardProps) => {
       <div className="single-recent mb-100">
         <div className="what-img">
           <Image
-            src={isHovered ? getImageUrl(post.gif) : getImageUrl(post.image)}
+            src={
+              isHovered
+                ? post.gif
+                  ? getImageUrl(post.gif)
+                  : getImageUrl(post.image)
+                : getImageUrl(post.image)
+            }
             alt={post.title}
             fill
+            unoptimized={isHovered}
           />
         </div>
         <div className="what-cap">

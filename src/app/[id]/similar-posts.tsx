@@ -17,7 +17,7 @@ export const SimilarPosts: FC<ISimilarPostsProps> = ({ categoryId }) => {
   const postsData = postsQuery.data?.data?.data ?? [];
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-wrap gap-5">
       {postsData.map((post) => (
         <PostListItem
           key={post.id}

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ImageSwitcher } from "@/components/image-switcher";
 import { baseURL } from "@/common/lib/http";
 import { getBannerGifs } from "./queries";
@@ -17,12 +16,10 @@ export const BannerGifs = () => {
   return (
     <ImageSwitcher srcs={srcs}>
       {(src) => (
-        <Image
-          fill
+        <img
           src={src}
           alt="header card"
-          objectFit="cover"
-          objectPosition="center"
+          className="h-full w-auto"
         />
       )}
     </ImageSwitcher>

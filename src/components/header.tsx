@@ -113,7 +113,7 @@ export const Header = () => {
                   </div>
                 </div>
                 <div className="col-xl-9 col-lg-9 col-md-9">
-                  <div className="relative header-banner f-right w-full max-w-2xl h-20 overflow-hidden">
+                  <div className="relative header-banner f-right h-28 overflow-hidden">
                     <BannerGifs />
                   </div>
                 </div>
