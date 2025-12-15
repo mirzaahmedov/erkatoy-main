@@ -31,10 +31,10 @@ export const RecentPosts = () => {
                 modules={[Autoplay, Pagination, Navigation]}
               > */}
             {Array.isArray(postsData)
-              ? postsData.map((post, index) => (
+              ? postsData.map((post) => (
                   // <SwiperSlide key={post.id}>
                   <PostCard
-                    key={post.id + index}
+                    key={post.id}
                     post={post}
                   />
                   // </SwiperSlide>
