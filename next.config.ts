@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
       {
         hostname: "192.168.102.68",
       },
+      {
+        hostname: "217.18.63.71",
+      },
     ],
   },
   typescript: {
