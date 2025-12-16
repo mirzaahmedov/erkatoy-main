@@ -22,19 +22,19 @@ export const Header = () => {
     <header>
       <div className="header-area">
         <div className="main-header ">
-          <div className="header-top black-bg d-none d-md-block ">
+          <div className="header-top black-bg">
             <div className="container">
               <div className="col-xl-12">
                 <div className="row d-flex justify-content-between align-items-center">
                   <div className="header-info-left">
                     <ul>
-                      <li>
+                      {/* <li>
                         <Image
                           src={headerIcon1Image}
                           alt="header icon 1"
                         />
                         34ºc, Sunny{" "}
-                      </li>
+                      </li> */}
                       <li>
                         <Image
                           src={headerIcon1Image}
@@ -45,7 +45,7 @@ export const Header = () => {
                     </ul>
                   </div>
                   <div className="header-info-right flex items-center gap-10">
-                    <ul className="header-social">
+                    {/* <ul className="header-social">
                       <li>
                         <a href="#">
                           <i className="fab fa-twitter"></i>
@@ -62,7 +62,7 @@ export const Header = () => {
                           <i className="fab fa-pinterest-p"></i>
                         </a>
                       </li>
-                    </ul>
+                    </ul> */}
 
                     <div className="flex items-center gap-4">
                       {isAuthenticated ? (
@@ -72,7 +72,10 @@ export const Header = () => {
                             className="flex items-center gap-2 text-white hover:!text-primary"
                           >
                             <UserCircle className="size-5" />
-                            <span hidden={!isAuthenticated}>
+                            <span
+                              hidden={!isAuthenticated}
+                              className="hidden md:block"
+                            >
                               {account?.email}
                             </span>
                           </button>

@@ -15,6 +15,7 @@ import "./globals.css";
 import { Footer, Header } from "@/components";
 
 import type { Metadata } from "next";
+import { MobileStickyBottomAds } from "@/widgets/ads/mobile-sticky-bottom";
 import { ReactQueryProvider } from "@/common/lib/react-query";
 import localFont from "next/font/local";
 
@@ -68,6 +69,7 @@ export default function RootLayout({
           <main className="flex-1 overflow-y-auto">
             {children}
             <Footer />
+            <MobileStickyBottomAds />
           </main>
         </ReactQueryProvider>
       </body>

@@ -1,7 +1,7 @@
 "use client";
 
+import { DesktopSideAds } from "../ads/desktop-side-ads";
 import { PostCard } from "./post-card";
-import { SideAds } from "../ads/side-ads";
 import { getRecentPostListQuery } from "./actions";
 import { useQuery } from "@tanstack/react-query";
 
@@ -14,39 +14,28 @@ export const RecentPosts = () => {
   const postsData = postsQuery.data?.data?.data ?? [];
 
   return (
-    <div className="recent-articles flex">
+    <div className="recent-articles flex gap-10 2xl:gap-20">
       <div className="recent-wrapper min-w-md flex-1">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="section-tittle mb-30 mt-30 ml-3">
-              <h3>Recent Articles</h3>
-            </div>
-          </div>
+        <div className="mt-8 mb-4 flex items-center gap-4">
+          <span className="block w-1.5 h-5 bg-blue-500 rounded-sm"></span>
+          <h5 className="text-xl lg:text-2xl font-semibold text-gray-800 tracking-tight">
+            So‘nggi maqolalar
+          </h5>
         </div>
-        <div className="row">
-          <div className="col-12 grid grid-cols-[repeat(auto-fit,minmax(300px,500px))]">
-            {/* <Swiper1
-                slidesPerView={3}
-                autoplay={{ delay: 3000 }}
-                modules={[Autoplay, Pagination, Navigation]}
-              > */}
-            {Array.isArray(postsData)
-              ? postsData.map((post) => (
-                  // <SwiperSlide key={post.id}>
-                  <PostCard
-                    key={post.id}
-                    post={post}
-                  />
-                  // </SwiperSlide>
-                ))
-              : null}
-            {/* </Swiper> */}
-          </div>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,auto))]">
+          {Array.isArray(postsData)
+            ? postsData.map((post) => (
+                <PostCard
+                  key={post.id}
+                  post={post}
+                />
+              ))
+            : null}
         </div>
       </div>
-      <div className="w-64 xl:w-80">
-        <SideAds />
-      </div>
+      <aside className="w-80 hidden lg:block">
+        <DesktopSideAds />
+      </aside>
     </div>
   );
 };

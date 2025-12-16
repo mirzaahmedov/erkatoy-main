@@ -1,6 +1,7 @@
 import type { IPost } from "@/entities";
 import Image from "next/image";
 import Link from "next/link";
+import dayjs from "dayjs";
 import { getImageUrl } from "@/utils/image";
 import { useState } from "react";
 
@@ -15,7 +16,7 @@ export const PostListItem = ({ post }: PostListItemProps) => {
       href={`/${post.id}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group flex flex-col w-64 rounded-lg overflow-hidden bg-white
+      className="w-full h-full group flex flex-col rounded-lg overflow-hidden bg-white
              border border-gray-200 transition-all duration-200
              hover:shadow-md hover:border-blue-300 hover:-translate-y-0.5"
     >
@@ -42,7 +43,7 @@ export const PostListItem = ({ post }: PostListItemProps) => {
         </span>
 
         <span className="text-xs text-gray-500">
-          {new Date(post.created_at).toLocaleDateString()}
+          {dayjs(post.created_at).format("DD.MM.YYYY")}
         </span>
       </div>
     </Link>

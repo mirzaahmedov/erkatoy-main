@@ -19,7 +19,7 @@ export const BannerGifs = () => {
         <img
           src={src}
           alt="header card"
-          className="h-full w-auto"
+          className="h-full w-auto rounded-md"
         />
       )}
     </ImageSwitcher>

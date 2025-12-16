@@ -18,11 +18,13 @@ export interface IAds {
   id: number;
   title: string;
   description: string;
-  type: "navbar" | "side";
+  type: string;
   status: boolean;
   file: string;
   created_at: string;
   updated_at: string;
   is_active: boolean;
+  cta_link: string | null;
+  cta_text: string | null;
   file_url: string;
 }
