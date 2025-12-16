@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useAuthStore } from "@/stores/auth";
 
-export const baseURL = "http://217.18.63.71:4009";
+export const baseURL = "https://raqamli-manaviyat.uz/ayzek-back/api/";
 
 export const client = axios.create({
   baseURL,
