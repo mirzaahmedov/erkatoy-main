@@ -1,6 +1,5 @@
 import "@/common/assets/css/bootstrap.min.css";
 import "@/common/assets/css/flaticon.css";
-import "@/common/assets/css/slicknav.css";
 import "@/common/assets/css/animate.min.css";
 import "@/common/assets/css/magnific-popup.css";
 import "@/common/assets/css/fontawesome-all.min.css";
