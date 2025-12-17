@@ -22,6 +22,7 @@ export const PostListItem = ({ post }: PostListItemProps) => {
     >
       <div className="relative w-full h-36 bg-gray-200">
         <Image
+          unoptimized
           src={
             isHovered && post.gif
               ? getImageUrl(post.gif)

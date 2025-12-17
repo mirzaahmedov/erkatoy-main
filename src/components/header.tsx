@@ -37,6 +37,7 @@ export const Header = () => {
                       </li> */}
                       <li>
                         <Image
+                          unoptimized
                           src={headerIcon1Image}
                           alt="header icon 1"
                         />
@@ -109,6 +110,7 @@ export const Header = () => {
                   <div className="logo">
                     <Link href="/">
                       <Image
+                        unoptimized
                         src={logoImage}
                         alt="logo"
                       />
@@ -130,6 +132,7 @@ export const Header = () => {
                   <div className="sticky-logo">
                     <Link href="/">
                       <Image
+                        unoptimized
                         src={logoImage}
                         alt="logo"
                         height={64}

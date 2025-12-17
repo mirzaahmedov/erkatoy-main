@@ -25,6 +25,7 @@ const PostPage = async ({ params }: PostPageProps) => {
             <div className="about-right md:mb-90 ql-snow">
               <div className="about-img mt-30">
                 <Image
+                  unoptimized
                   src={getImageUrl(post?.data.image)}
                   alt={post?.data.title}
                   width={1000}

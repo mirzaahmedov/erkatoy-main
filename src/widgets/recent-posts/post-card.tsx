@@ -26,7 +26,7 @@ export const PostCard = ({ post }: PostCardProps) => {
             }
             alt={post.title}
             fill
-            unoptimized={isHovered}
+            unoptimized
           />
         </div>
         <div className="what-cap">
