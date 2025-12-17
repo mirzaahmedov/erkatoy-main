@@ -1,7 +1,6 @@
 "use client";
 
 import { ImageSwitcher } from "@/components/image-switcher";
-import { baseURL } from "@/common/lib/http";
 import { getBannerGifs } from "./queries";
 import { useQuery } from "@tanstack/react-query";
 
@@ -11,7 +10,7 @@ export const BannerGifs = () => {
     queryFn: () => getBannerGifs(),
   });
 
-  const srcs = gifs?.data?.map((item) => `${baseURL}/gif/${item.id}`) ?? [];
+  const srcs = gifs?.data?.map((item) => `/images/gif/${item.id}`) ?? [];
 
   return (
     <ImageSwitcher srcs={srcs}>

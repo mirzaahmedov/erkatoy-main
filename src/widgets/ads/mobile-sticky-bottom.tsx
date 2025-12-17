@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { IAds, getSidebarAds } from "./action";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { baseURL } from "@/common/lib/http";
 import { useQuery } from "@tanstack/react-query";
 
 export const MobileStickyBottomAds = () => {
@@ -48,7 +49,7 @@ const AdSlide = ({ ad }: { ad: IAds }) => {
     <div className="flex items-center gap-3 p-3">
       <div className="w-14 h-14 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
         <img
-          src={ad.file_url}
+          src={ad.file_url.replace(baseURL, "/images")}
           alt={ad.title}
           className="w-full h-full object-cover"
         />

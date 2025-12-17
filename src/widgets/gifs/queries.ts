@@ -1,3 +1,5 @@
+"use server";
+
 import type { IApiResponse } from "@/entities";
 import { client } from "@/common/lib/http";
 

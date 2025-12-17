@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: "/api/:path*",
-        destination: "https://raqamli-manaviyat.uz/ayzek-back/api/:path*",
+        source: "/images/:path*",
+        destination: "http://217.18.63.71:4009/:path*",
       },
     ];
   },
