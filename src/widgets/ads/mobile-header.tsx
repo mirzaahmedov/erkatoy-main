@@ -50,6 +50,8 @@ const AdSlide = ({ ad }: { ad: IAds }) => {
           src={ad.file_url.replace(baseURL, "/images")}
           alt={ad.title}
           className="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
       </div>
 

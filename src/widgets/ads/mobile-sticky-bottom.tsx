@@ -55,6 +55,8 @@ const AdSlide = ({ ad }: { ad: IAds }) => {
           )}
           alt={ad.title}
           className="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
       </div>
 

@@ -22,6 +22,8 @@ export const BannerGifs = () => {
           src={src}
           alt="header card"
           className="h-full w-auto rounded-md"
+          loading="lazy"
+          decoding="async"
         />
       )}
     </ImageSwitcher>
