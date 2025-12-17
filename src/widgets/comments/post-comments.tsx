@@ -7,7 +7,7 @@ import {
   useCommentDelete,
   useCommentUpdate,
   useComments,
-} from "@/hooks/useComment";
+} from "@/hooks/comment/useComment";
 
 import { Button } from "@/components/button";
 import Swal from "sweetalert2";
