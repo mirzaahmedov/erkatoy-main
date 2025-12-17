@@ -115,7 +115,7 @@ export const Header = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="col-xl-9 col-lg-9 col-md-9">
+                <div className="col-xl-9 col-lg-9 col-md-9 hidden lg:block">
                   <div className="relative header-banner f-right h-28 overflow-hidden">
                     <BannerGifs />
                   </div>
@@ -128,12 +128,13 @@ export const Header = () => {
               <div className="row align-items-center">
                 <div className="col-xl-10 col-lg-10 col-md-12 header-flex">
                   <div className="sticky-logo">
-                    <a href="index.html">
+                    <Link href="/">
                       <Image
                         src={logoImage}
                         alt="logo"
+                        height={64}
                       />
-                    </a>
+                    </Link>
                   </div>
                   {/* <div className="main-menu d-none d-md-block">
                     <nav>

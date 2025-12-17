@@ -29,7 +29,6 @@ export const MobileStickyBottomAds = () => {
             clickable: true,
           }}
           modules={[Pagination, Autoplay]}
-          className="pb-5"
         >
           {items.map((ad, index) => (
             <SwiperSlide
