@@ -26,6 +26,8 @@ export const PostCard = ({ post }: PostCardProps) => {
             }
             alt={post.title}
             fill
+            objectFit="cover"
+            objectPosition="center"
             unoptimized
           />
         </div>

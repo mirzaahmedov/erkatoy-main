@@ -30,6 +30,8 @@ const PostPage = async ({ params }: PostPageProps) => {
                   alt={post?.data.title}
                   width={1000}
                   height={500}
+                  objectFit="cover"
+                  objectPosition="center"
                   className="w-full h-auto"
                 />
               </div>
