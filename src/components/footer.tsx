@@ -1,97 +1,56 @@
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+import CompanyInfo from "./company-info";
 import Image from "next/image";
-import logoImage from "@/common/assets/img/logo/logo.png";
+import Link from "next/link";
+import { SocialMedia } from "./social-media";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import logoImage from "@/common/assets/img/logo/logo_new.png";
+
+config.autoAddCss = false;
 
 export const Footer = () => {
   return (
-    <footer>
-      <div className="footer-area footer-padding fix">
-        <div className="container">
-          <div className="row d-flex justify-content-between">
-            <div className="col-xl-5 col-lg-5 col-md-7 col-sm-12">
-              <div className="single-footer-caption">
-                <div className="single-footer-caption">
-                  <div className="footer-logo">
-                    <a href="index.html">
-                      <Image
-                        src={logoImage}
-                        alt="logo"
-                      />
-                    </a>
-                  </div>
-                  <div className="footer-tittle">
-                    <div className="footer-pera">
-                      <p>
-                        Erkatoy.uz – bolajonlar uchun mo‘ljallangan ertaklar,
-                        she’rlar, topishmoqlar va bolalar adabiyotiga oid turli
-                        xil qiziqarli materiallar jamlangan o‘zbekcha vebsayt.
-                        Sayt kichkintoylarning tasavvuri, fikrlashi va nutqini
-                        rivojlantirishga ko‘maklashuvchi, o‘qish va eshitish
-                        orqali o‘rganishga xizmat qiluvchi boy manba
-                        hisoblanadi.
-                      </p>
-                    </div>
-                  </div>
-                  {/* <div className="footer-social">
-                    <a href="#">
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-pinterest-p"></i>
-                    </a>
-                  </div> */}
-                </div>
-              </div>
+    <footer className="bg-[#100f0f]">
+      <div className="container py-10">
+        <div className="flex flex-wrap flex-col md:flex-row items-stretch justify-between gap-10">
+          <div className="space-y-5">
+            <div className="footer-logo">
+              <Link
+                href="/"
+                className="flex items-center"
+              >
+                <Image
+                  src={logoImage}
+                  alt="logo"
+                  height={120}
+                />
+                <h3 className="font-matemasie text-4xl text-white">Erkatoy</h3>
+              </Link>
             </div>
-            <div className="col-xl-3 col-lg-3 col-md-4  col-sm-6">
-              {/* <div className="single-footer-caption mt-60">
-                <div className="footer-tittle">
-                  <h4>Newsletter</h4>
-                  <p>
-                    Heaven fruitful doesn&apos;t over les idays appear creeping
-                  </p>
-                  <div className="footer-form">
-                    <div id="mc_embed_signup">
-                      <form
-                        target="_blank"
-                        action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                        method="get"
-                        className="subscribe_form relative mail_part"
-                      >
-                        <input
-                          type="email"
-                          name="email"
-                          id="newsletter-form-email"
-                          placeholder="Email Address"
-                          className="placeholder hide-on-focus"
-                          // onfocus="this.placeholder = ''"
-                          // onblur="this.placeholder = ' Email Address '"
-                        />
-                        <div className="form-icon">
-                          <button
-                            type="submit"
-                            name="submit"
-                            id="newsletter-submit"
-                            className="email_icon newsletter-submit button-contactForm"
-                          >
-                            <Image
-                              src={formIconImage}
-                              alt="form icon"
-                            />
-                          </button>
-                        </div>
-                        <div className="mt-10 info"></div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+
+            <SocialMedia />
+          </div>
+          <div>
+            <div className="overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1EvJ0tFZG63dE2pvp5jSknO_nbKD6ifs&ehbc=2E312F&noprof=1"
+                height="380"
+                className="w-full md:w-[520px]"
+                style={{
+                  border: "0px",
+                  padding: "0",
+                  marginTop: "-60px",
+                }}
+              ></iframe>
             </div>
+          </div>
+          <div>
+            <CompanyInfo />
           </div>
         </div>
       </div>
+
       <div className="footer-bottom-area">
         <div className="container">
           <div className="footer-border">
@@ -105,21 +64,6 @@ export const Footer = () => {
                   </p>
                 </div>
               </div>
-              {/* <div className="col-lg-6">
-                <div className="footer-menu f-right">
-                  <ul>
-                    <li>
-                      <a href="#">Terms of use</a>
-                    </li>
-                    <li>
-                      <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="#">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

@@ -10,6 +10,9 @@ export default {
         foreground: "var(--foreground)",
         primary: "#f27420",
       },
+      fontFamily: {
+        matemasie: ["var(--font-matemasie)", "sans-serif"],
+      },
     },
   },
   plugins: [],

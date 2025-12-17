@@ -13,10 +13,16 @@ import "./globals.css";
 
 import { Footer, Header } from "@/components";
 
+import { Matemasie } from "next/font/google";
 import type { Metadata } from "next";
 import { MobileStickyBottomAds } from "@/widgets/ads/mobile-sticky-bottom";
 import { ReactQueryProvider } from "@/common/lib/react-query";
 import localFont from "next/font/local";
+
+const matemasie = Matemasie({
+  weight: "400",
+  variable: "--font-matemasie",
+});
 
 const nunito = localFont({
   src: [
@@ -62,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} antialiased`}>
+      <body className={`${nunito.className} ${matemasie.variable} antialiased`}>
         <ReactQueryProvider>
           <Header />
           <main className="flex-1 overflow-y-auto">

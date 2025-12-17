@@ -6,7 +6,8 @@ import { BannerGifs } from "@/widgets/gifs/banner-gifs";
 import Image from "next/image";
 import Link from "next/link";
 import headerIcon1Image from "@/common/assets/img/icon/header_icon1.png";
-import logoImage from "@/common/assets/img/logo/logo.png";
+import logoImage from "@/common/assets/img/logo/logo_new.png";
+import { twMerge } from "tailwind-merge";
 import { useAuthStore } from "@/stores/auth";
 import { useRouter } from "next/navigation";
 
@@ -28,14 +29,7 @@ export const Header = () => {
                 <div className="row d-flex justify-content-between align-items-center">
                   <div className="header-info-left">
                     <ul>
-                      {/* <li>
-                        <Image
-                          src={headerIcon1Image}
-                          alt="header icon 1"
-                        />
-                        34ºc, Sunny{" "}
-                      </li> */}
-                      <li>
+                      <li className="flex items-center gap-2">
                         <Image
                           unoptimized
                           src={headerIcon1Image}
@@ -46,25 +40,6 @@ export const Header = () => {
                     </ul>
                   </div>
                   <div className="header-info-right flex items-center gap-10">
-                    {/* <ul className="header-social">
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        {" "}
-                        <a href="#">
-                          <i className="fab fa-pinterest-p"></i>
-                        </a>
-                      </li>
-                    </ul> */}
-
                     <div className="flex items-center gap-4">
                       {isAuthenticated ? (
                         <>
@@ -108,12 +83,20 @@ export const Header = () => {
               <div className="row d-flex align-items-center">
                 <div className="col-xl-3 col-lg-3 col-md-3">
                   <div className="logo">
-                    <Link href="/">
+                    <Link
+                      href="/"
+                      className="flex items-center"
+                    >
                       <Image
                         unoptimized
                         src={logoImage}
                         alt="logo"
+                        height={120}
                       />
+
+                      <h3 className="font-matemasie text-4xl text-orange-950">
+                        Erkatoy
+                      </h3>
                     </Link>
                   </div>
                 </div>
@@ -130,13 +113,19 @@ export const Header = () => {
               <div className="row align-items-center">
                 <div className="col-xl-10 col-lg-10 col-md-12 header-flex">
                   <div className="sticky-logo">
-                    <Link href="/">
+                    <Link
+                      href="/"
+                      className="flex items-center gap-1"
+                    >
                       <Image
                         unoptimized
                         src={logoImage}
                         alt="logo"
                         height={64}
                       />
+                      <h3 className="font-matemasie text-xl text-orange-950">
+                        Erkatoy
+                      </h3>
                     </Link>
                   </div>
                   {/* <div className="main-menu d-none d-md-block">
