@@ -17,15 +17,12 @@ export interface ICommentCreatePayload {
 
 export const getComments = async (postId: number) => {
   "use server";
-  const response = await client.get<IApiListResponse<IComment>>(
-    "/api/comment",
-    {
-      baseURL: "",
-      params: {
-        post_id: postId,
-      },
+  const response = await client.get<IApiListResponse<IComment>>("/comment", {
+    baseURL: "",
+    params: {
+      post_id: postId,
     },
-  );
+  });
   return response.data;
 };
 

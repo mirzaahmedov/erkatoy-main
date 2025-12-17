@@ -1,14 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/images/:path*",
-        destination: "http://217.18.63.71:4009/:path*",
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {
@@ -16,6 +8,9 @@ const nextConfig: NextConfig = {
       },
       {
         hostname: "217.18.63.71",
+      },
+      {
+        hostname: "raqamli-manaviyat.uz",
       },
     ],
   },

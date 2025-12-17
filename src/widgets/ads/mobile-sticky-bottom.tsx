@@ -49,7 +49,10 @@ const AdSlide = ({ ad }: { ad: IAds }) => {
     <div className="flex items-center gap-3 p-3">
       <div className="w-14 h-14 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
         <img
-          src={ad.file_url.replace(baseURL, "/images")}
+          src={ad.file_url.replace(
+            baseURL,
+            "https://raqamli-manaviyat.uz/ayzek-back/api",
+          )}
           alt={ad.title}
           className="w-full h-full object-cover"
         />

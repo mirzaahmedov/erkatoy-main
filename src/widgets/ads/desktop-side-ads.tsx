@@ -42,7 +42,10 @@ function AdsContainer({ ads }: { ads: IAds[] }) {
         >
           <div className="w-full h-40 bg-gray-100 overflow-hidden">
             <img
-              src={ad.file_url.replace(baseURL, "/images")}
+              src={ad.file_url.replace(
+                baseURL,
+                "https://raqamli-manaviyat.uz/ayzek-back/api",
+              )}
               alt={ad.title || "Advertisement"}
               className="w-full h-full object-cover"
             />

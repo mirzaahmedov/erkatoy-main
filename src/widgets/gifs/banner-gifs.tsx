@@ -10,7 +10,10 @@ export const BannerGifs = () => {
     queryFn: () => getBannerGifs(),
   });
 
-  const srcs = gifs?.data?.map((item) => `/images/gif/${item.id}`) ?? [];
+  const srcs =
+    gifs?.data?.map(
+      (item) => `https://raqamli-manaviyat.uz/ayzek-back/api/gif/${item.id}`,
+    ) ?? [];
 
   return (
     <ImageSwitcher srcs={srcs}>
