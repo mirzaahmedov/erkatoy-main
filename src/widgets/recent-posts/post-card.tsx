@@ -20,10 +20,8 @@ export const PostCard = ({ post }: PostCardProps) => {
         <div className="what-img">
           <Image
             src={
-              isHovered
-                ? post.gif
-                  ? getImageUrl(post.gif)
-                  : getImageUrl(post.image)
+              isHovered && post.gif
+                ? getImageUrl(post.gif)
                 : getImageUrl(post.image)
             }
             alt={post.title}
