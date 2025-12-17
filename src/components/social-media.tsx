@@ -32,6 +32,7 @@ export const SocialMedia = () => {
   return (
     <div className="flex items-center text-white">
       <motion.a
+        target="_blank"
         href="https://www.youtube.com/@PewDiePie"
         className="group size-16 grid place-items-center rounded-full 
                    hover:text-[#FF3D3D] transition duration-75"
@@ -47,6 +48,7 @@ export const SocialMedia = () => {
       </motion.a>
 
       <motion.a
+        target="_blank"
         href="https://www.instagram.com/"
         className="group size-16 grid place-items-center rounded-full 
                    hover:text-[#E1306C] transition duration-75"
@@ -62,6 +64,7 @@ export const SocialMedia = () => {
       </motion.a>
 
       <motion.a
+        target="_blank"
         href="https://t.me/mirzaahmedov_dev"
         className="group size-16 grid place-items-center rounded-full 
                    hover:text-[#2AABEE] transition duration-75"
@@ -77,6 +80,7 @@ export const SocialMedia = () => {
       </motion.a>
 
       <motion.a
+        target="_blank"
         href="https://www.facebook.com"
         className="group size-16 grid place-items-center rounded-full 
                    hover:text-[#1877F2] transition duration-75"
