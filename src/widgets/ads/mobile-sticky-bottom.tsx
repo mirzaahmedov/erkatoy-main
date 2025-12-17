@@ -1,5 +1,9 @@
 "use client";
 
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import { Autoplay, Pagination } from "swiper/modules";
 import { IAds, getSidebarAds } from "./action";
 import { Swiper, SwiperSlide } from "swiper/react";
