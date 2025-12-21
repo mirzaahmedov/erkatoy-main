@@ -12,4 +12,5 @@ export interface IPost {
   created_at: string;
   updated_at: string;
   category_name: string;
+  video: string | null;
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { MobileHeaderAds } from "@/widgets/ads/mobile-header";
 import { PostComments } from "@/widgets/comments/post-comments";
 import { SimilarPosts } from "./similar-posts";
+import { VideoPlayer } from "@/components/video-player";
 import { getImageUrl } from "@/utils/image";
 import { getPostByIdQuery } from "./actions";
 
@@ -23,6 +24,13 @@ const PostPage = async ({ params }: PostPageProps) => {
         <div className="flex gap-10 2xl:gap-20">
           <div className="flex-1 overflow-hidden pb-10 space-y-10">
             <div className="about-right md:mb-90 ql-snow">
+              {post?.data.video && (
+                <VideoPlayer
+                  url={getImageUrl(post.data.video)}
+                  title={post.data.title}
+                />
+              )}
+
               <div className="about-img mt-30">
                 <Image
                   unoptimized
@@ -34,6 +42,12 @@ const PostPage = async ({ params }: PostPageProps) => {
                   objectPosition="center"
                   className="w-full h-auto"
                 />
+              </div>
+
+              <div className="mt-8 mb-6">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                  {post?.data.title}
+                </h1>
               </div>
               <div
                 dangerouslySetInnerHTML={{ __html: post?.data.content }}
